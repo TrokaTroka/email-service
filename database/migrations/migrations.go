@@ -1,10 +1,11 @@
 package migrations
 
 import (
-	"gorm.io/gorm"
 	"mail-sender/models"
+
+	"gorm.io/gorm"
 )
 
 func RunMigrations(db *gorm.DB) {
-	db.AutoMigrate(models.Email{})
+	db.AutoMigrate(&models.Email{})
 }

@@ -1,8 +1,9 @@
 package email
 
 import (
-	"github.com/gin-gonic/gin"
 	"mail-sender/models"
+
+	"github.com/gin-gonic/gin"
 )
 
 func Post(c *gin.Context) {
@@ -18,14 +19,6 @@ func Post(c *gin.Context) {
 		return
 	}
 
-	err = SaveEmail(&email)
-	
-	if err != nil {
-		c.JSON(400, gin.H{
-			"error": err.Error(),
-		})
-	}
-
 	err = SendEmail(&email)
 	
 	if err != nil {
@@ -34,6 +27,15 @@ func Post(c *gin.Context) {
 		})
 	}
 
+	err = SaveEmail(&email)
+	
+	if err != nil {
+		c.JSON(400, gin.H{
+			"error": err.Error(),
+		})
+	}
+
+	
 	c.JSON(200, gin.H{
 		"email": email,
 	})

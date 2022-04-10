@@ -2,6 +2,7 @@ package database
 
 import (
 	"log"
+	"mail-sender/config"
 	"mail-sender/database/migrations"
 	"time"
 
@@ -13,7 +14,12 @@ var db *gorm.DB
 
 func StartDB() {
 
-	vdb := "host=localhost port=5432 user=postgres dbname=postgres password=root sslmode=disable"
+	port, _ := config.GetConfig("db_port")
+	user, _ := config.GetConfig("db_user")
+	dbname, _ := config.GetConfig("db_name")
+	password, _ := config.GetConfig("db_password")
+	
+	vdb := "host=localhost port=" + port + " user=" + user + " dbname=" + dbname + " password=" + password + " sslmode=disable"
 
 	database, err := gorm.Open(postgres.Open(vdb), &gorm.Config{})
 
@@ -23,11 +29,11 @@ func StartDB() {
 
 	db = database
 
-	config, _ := db.DB()
+	dbConfig, _ := db.DB()
 
-	config.SetMaxIdleConns(10)
-	config.SetMaxOpenConns(100)
-	config.SetConnMaxLifetime(time.Minute * 5)
+	dbConfig.SetMaxIdleConns(10)
+	dbConfig.SetMaxOpenConns(100)
+	dbConfig.SetConnMaxLifetime(time.Minute * 5)
 
 	migrations.RunMigrations(db)
 }

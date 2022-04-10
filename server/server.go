@@ -2,6 +2,7 @@ package server
 
 import (
 	"log"
+	"mail-sender/config"
 	"mail-sender/server/routes"
 
 	"github.com/gin-gonic/gin"
@@ -13,8 +14,15 @@ type Server struct {
 }
 
 func NewServer() *Server {
+	port, err := config.GetConfig("port")
+
+	if err != nil || port == "" {
+		port = "8080"
+		log.Println("Server port wasn't specified, service will be started in default port: " + port)
+	}
+
 	return &Server{
-		port:   "8080",
+		port: port,
 		server: gin.Default(),
 	}
 }
