@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dbf7fac-667f-4d0f-a52b-3f7516a12a72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/models/email.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/email/email.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/database.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/migrations.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/migrations.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/email/email_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/email/email_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/email/email_dto.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/email/email_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/email/email_repository.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/email/email_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/email/email_service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/email.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/email.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +50,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Workspace\mail-sender\config" />
+      <recent name="C:\Workspace\mail-sender" />
       <recent name="C:\Workspace\mail-sender\models" />
     </key>
   </component>
@@ -63,6 +64,15 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="go build mail-sender" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="mail-sender" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="mail-sender" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
       <module name="mail-sender" />
       <working_directory value="$PROJECT_DIR$" />
@@ -72,6 +82,11 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build mail-sender" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
